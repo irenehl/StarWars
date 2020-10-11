@@ -1,7 +1,23 @@
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
-  font-size: 1rem; }
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif; }
+
+* {
+  box-sizing: border-box;
+  transition: ease 0.5s; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-color: #ffffff; }
+
+h1 {
+  color: #F9AA33;
+  font-size: 2.5rem;
+  padding: 0.5rem; }
 
 .container {
   box-sizing: border-box;
@@ -10,6 +26,11 @@
   flex-flow: row wrap;
   justify-content: space-between;
   width: 100vw; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem; }
 
 .card {
   margin: 1rem;
@@ -52,3 +73,33 @@
   border-bottom: 1px solid white;
   font-weight: 700;
   font-size: 1.2rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem; }
+
+.navbar {
+  background-color: #232F34;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  height: 15%;
+  font-size: 4rem;
+  font-weight: 700; }
+  .navbar .icon {
+    height: 7vh;
+    padding: 1vh;
+    display: flex;
+    align-items: flex-start; }
+  .navbar .container-navbar {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+  .navbar .search {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+    border-radius: 23px 23px 23px 23px;
+    display: flex;
+    align-items: flex-end; }
