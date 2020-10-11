@@ -1,0 +1,25 @@
+{
+  "name": "parcial2-chanekes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-sass -o css sass",
+    "watch": "node-sass -w -o css sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UCASV/parcial2-chanekes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UCASV/parcial2-chanekes/issues"
+  },
+  "homepage": "https://github.com/UCASV/parcial2-chanekes#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
