@@ -1,0 +1,32 @@
+// Estilos compartidos entre todos los contenedores, usan mixin de flexLayouit
+
+.container
+    width: 100%
+    box-sizing: border-box
+    @include flexLayout
+
+section.container
+    padding: 3rem
+    flex-flow: row wrap
+    align-content: flex-start
+
+    h2
+        width: 100%
+        margin: 1.5rem 0
+        font-size: 3rem
+        text-align: center
+
+.row
+    display: inherit
+    flex-direction: row
+    width: 100%
+
+.pd-side
+    box-sizing: border-box
+    padding: 0 1.5rem
+
+.ai-c
+    align-items: center
+
+.jc-fe
+    justify-content: flex-end
