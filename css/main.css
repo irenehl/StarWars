@@ -16,7 +16,7 @@ body {
 
 h1 {
   color: #F9AA33;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   padding: 0.5rem; }
 
 input:focus {
@@ -107,6 +107,9 @@ input:focus {
   flex-flow: wrap;
   flex-direction: column; }
 
+.container-btn {
+  flex-direction: row; }
+
 section.container {
   padding: 3rem;
   flex-flow: row wrap;
@@ -131,3 +134,28 @@ section.container {
 
 .jc-fe {
   justify-content: flex-end; }
+
+.button {
+  width: 30%;
+  border: none;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #F9AA33;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center; }
+
+.button:hover {
+  color: white;
+  box-shadow: 0 4px 10px #ac8731;
+  transition: all 0.2s ease; }
+
+.home {
+  width: 100vw;
+  display: inline-block;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center; }
