@@ -11,6 +11,9 @@
 a {
   text-decoration: none; }
 
+a:visited {
+  color: black; }
+
 body {
   background-color: #ffffff; }
 
@@ -19,18 +22,18 @@ h1 {
   font-size: 1.5rem;
   padding: 0.5rem; }
 
-input:focus {
+input:focus, button:focus {
   outline: none; }
 
 .card {
-  margin: 2rem 7rem;
+  margin: 2rem 3rem;
   border-radius: 15px;
   box-sizing: border-box;
   background-color: #E1DEE5;
-  width: calc((100% - (7rem * 8)) / 4);
+  width: 15%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center; }
 
 .corner {
@@ -63,6 +66,48 @@ input:focus {
   border-bottom: 1.5px solid black;
   font-weight: 700;
   font-size: 1.2rem; }
+
+.card-tripulants {
+  margin: 2rem 3rem;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: #E1DEE5;
+  width: 25%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center; }
+  .card-tripulants .card-info {
+    box-sizing: border-box;
+    padding: 0.7rem;
+    border-radius: 0 0 15px 15px;
+    background-color: #4A6572;
+    width: 100%;
+    color: white; }
+
+.card.selected-starship {
+  width: 50%; }
+
+.corner:hover .i {
+  color: #F9AA33; }
+
+.button {
+  width: 30%;
+  border: none;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #F9AA33;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center; }
+
+.button:hover {
+  color: white;
+  box-shadow: 0 4px 10px #ac8731;
+  transition: all 0.2s ease; }
 
 .navbar {
   background-color: #232F34;
@@ -102,16 +147,18 @@ input:focus {
 
 .container {
   width: 100%;
+  height: 80vh;
+  overflow-y: scroll;
   box-sizing: border-box;
+  justify-content: space-around;
   display: flex;
-  flex-flow: wrap;
-  flex-direction: column; }
+  flex-flow: column wrap; }
 
 .container-btn {
   flex-direction: row; }
 
 section.container {
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
   flex-flow: row wrap;
   align-content: flex-start; }
   section.container h2 {
@@ -135,27 +182,46 @@ section.container {
 .jc-fe {
   justify-content: flex-end; }
 
-.button {
-  width: 30%;
-  border: none;
-  margin: 1rem;
-  padding: 0.5rem;
-  border-radius: 15px 15px 15px 15px;
-  background-color: #F9AA33;
-  font-weight: 700;
+.card-container {
+  margin-top: 3rem;
+  width: 50%;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center; }
+  flex-flow: column wrap;
+  flex-direction: row;
+  justify-content: center; }
+  .card-container .selected-starship {
+    margin: 0;
+    padding: 0;
+    height: 40vh;
+    width: 35%; }
+    .card-container .selected-starship .card-img {
+      max-width: 45%; }
 
-.button:hover {
-  color: white;
-  box-shadow: 0 4px 10px #ac8731;
-  transition: all 0.2s ease; }
+.card-container.starship {
+  align-items: center;
+  flex-direction: column; }
 
-.home {
-  width: 100vw;
-  display: inline-block;
+.tripulants {
+  flex-direction: row;
+  height: 50vh;
+  overflow-y: scroll; }
+  .tripulants .card-tripulants {
+    margin: 0 1rem;
+    margin-bottom: 2rem;
+    min-width: 30%; }
+
+.col-half {
+  width: 50%;
+  height: 70%;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  display: flex;
+  flex-flow: column wrap;
   flex-wrap: nowrap;
-  justify-content: space-around;
   align-items: center; }
+  .col-half img {
+    max-height: 80%; }
+
+.col-half .i {
+  min-height: 80%;
+  width: auto; }

@@ -1,12 +1,12 @@
 .card
-    margin: 2rem 7rem
+    margin: 2rem 3rem
     border-radius: 15px
     box-sizing: border-box
     background-color: $quaternary
-    width: calc((100% - (7rem * 8)) / 4)
+    width: 15%
     display: flex
     flex-flow: column nowrap
-    justify-content: center
+    justify-content: space-around
     align-items: center
 
 .corner
@@ -39,3 +39,29 @@
     border-bottom: 1.5px solid black
     font-weight: 700
     font-size: 1.2rem
+
+.card-tripulants
+    margin: 2rem 3rem
+    border-radius: 15px
+    box-sizing: border-box
+    background-color: $quaternary
+    width: 25%
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-around
+    align-items: center
+
+    .card-info
+        box-sizing: border-box
+        padding: 0.7rem
+        border-radius: 0 0 15px 15px
+        background-color: $tertiary
+        width: 100%
+        color: white
+
+.card.selected-starship
+    width: 50%
+
+.corner:hover .i
+    color: $primary // k coma mierda lirul biejo
+    
