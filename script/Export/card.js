@@ -31,6 +31,8 @@ export default function Card(classes, starship) {
     cardInfo.appendChild(cardTitle)
     cardInfo.appendChild(cardDesc)
 
+    button.appendChild(icon)
+
     card.appendChild(button)
     card.appendChild(img)
     card.appendChild(cardInfo)
