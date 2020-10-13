@@ -6,6 +6,11 @@ export default function Card(classes, starship) {
     var button = document.createElement("button")
     button.classList = ["corner fav"]
 
+    button.onclick = (e) => {
+        localStorage.setItem('temp', JSON.stringify(starship))
+        window.location.replace('/people.html')
+    }
+
     var icon = document.createElement("i")
     icon.classList = classes.btn
 

@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./img/millennium-falcon.png">
     <script src="https://kit.fontawesome.com/86ce24be27.js" crossorigin="anonymous"></script>
+    <script defer src="./script/people.js"></script>
 </head>
 
 <body>
+    <!--Start of navbar-->
     <nav class="navbar ai-c">
         <a class="branding ai-c pd-side" href="index.html">
             <img src="./img/millennium-falcon.png" alt="millennium-falcon" class="brand">
@@ -21,26 +23,21 @@
             <i class="i fas fa-search icon"></i>
         </div>
     </nav>
+    <!--End of navbar-->
+    <!--Start of section-->
     <section class="container">
         <h2>Tripulants</h2>
+        <!--Card for starship-->
         <div class="card-container starship" id="selected-starship-container">
             <article class="card selected-starship">
-                <button class="corner fav">
-                    <i class="i fas fa-heart"></i>
-                </button>
-                <img src="./img/spaceship.png" alt="spaceship" class="card-img">
-    
+                <img src="./img/spaceship.png" alt="starship" class="card-img hg-20">
                 <div class="card-info">
-                    <h3 class="card-title">Star Destroyer</h3>
-                    <p class="card-desc">
-                        MODELO: XXXX<br>
-                        MODELO: XXXX<br>
-                        MODELO: XXXX<br>
-                    </p>
+                    <h3 class="card-title" id="temp-card-title"></h3>
+                    <p class="card-desc" id="temp-card-desc"></p>
                 </div>
             </article>
-            <button class="button">Save</button>
         </div>
+        <!--Card for tripulants-->
         <div class="card-container tripulants">
             <article class="card-tripulants">
                 <button class="corner fav">
@@ -96,6 +93,12 @@
             </article>
         </div>
     </section>
+    <!--End of section-->
 </body>
+
+<!--
+    Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a
+    href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+-->
 
 </html>
