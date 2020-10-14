@@ -10,9 +10,6 @@ export default function Card(classes, starship) {
         localStorage.setItem('temp', JSON.stringify(starship))
         
         var ships = JSON.parse(localStorage.getItem('ships'))
-
-        console.log(ships);
-
         if(!ships) {
             ships = {ships: [starship]}
         }

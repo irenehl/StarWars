@@ -6,7 +6,7 @@ var cardInfo = document.getElementById('temp-card-desc')
 
 var currentPage = 1,
 tripulants = [],
-storedAndSelected = [],
+
 classes = {
     card: ["card-tripulants"],
     btn: ["i fas fa-heart"]
@@ -23,11 +23,9 @@ Passengers: ${starship.passengers} <br> Speed: ${starship.max_atmosphering_speed
 
 fetch(utilities.BASE_URL + `people/?page=${currentPage}`)
 .then(res => res.json())
-.then(p => {
-    tripulants = p.results
-    p.results.forEach(st => {
-        pagination.appendChild(Tripulants(classes, st))
-    })
+.then(tr => {
+    tripulants = tr.results
+    fillContainerFromList(savedTripulants.concat(tripulants), e => e, savedTripulants.length)
 })
 
 var savedTripulants = JSON.parse(localStorage.getItem('ships')).ships.find(s => s.name === starship.name).trip || []
@@ -40,11 +38,10 @@ var fillContainerWithCards = (increment) => {
 
     fetch(utilities.BASE_URL + `people/?page=${currentPage}`)
     .then(res => res.json())
-    .then(sts => {
-        tripulants = sts.results
+    .then(trs => {
+        tripulants = trs.results
+        fillContainerFromList(savedTripulants.concat(tripulants), e => e, savedTripulants.length)
     })
-
-    fillContainerFromList()
 
     pagination.classList.toggle("hidden")
 }
@@ -57,12 +54,16 @@ btnPrev.onclick = (e) => {
     fillContainerWithCards(-1)
 }
 
-var fillContainerFromList = (list, filter) => {
-    var stAux = list.filter(filter)
+var fillContainerFromList = (list, filter, size) => {
+    pagination.innerHTML = ''
+    var tripAux = list.filter(filter), aux = 0
 
-    stAux.forEach(st => { 
-        pagination.appendChild(Tripulants(classes, st, true))
+    tripAux.forEach(tr => {
+        if(savedTripulants.includes(tr))
+            pagination.appendChild(Tripulants(classes, tr, true, starship.name))
+        else
+            pagination.appendChild(Tripulants(classes, tr, false, starship.name))
     })
 }
 
-fillContainerFromList(savedTripulants.concat(tripulants), e => e)
+fillContainerFromList(savedTripulants.concat(tripulants), e => e, savedTripulants.length)

@@ -90,6 +90,8 @@ div.hidden {
     background-color: #4A6572;
     width: 100%;
     color: white; }
+  .card-tripulants .active {
+    background-color: #F9AA33; }
 
 .card.selected-starship {
   width: 50%; }
