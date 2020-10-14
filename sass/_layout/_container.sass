@@ -6,7 +6,6 @@
 .container
     width: 100%
     height: 80vh
-    overflow-y: scroll
     box-sizing: border-box
     justify-content: space-around
     @include flexLayout
@@ -31,6 +30,11 @@ section.container
     display: inherit
     flex-direction: row
     width: 100%
+
+.fd-row
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
 
 .pd-side
     box-sizing: border-box
@@ -72,7 +76,6 @@ section.container
 .tripulants
     flex-direction: row
     height: 50vh
-    overflow-y: scroll
 
     .card-tripulants
         margin: 0 1rem
@@ -81,7 +84,7 @@ section.container
 
 .col-half 
     width: 50%
-    height: 70%
+    height: 60%
     box-sizing: border-box
     padding: 1rem 0
     @include flexLayout

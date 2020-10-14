@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./img/millennium-falcon.png">
     <script src="https://kit.fontawesome.com/86ce24be27.js" crossorigin="anonymous"></script>
-    <script defer src="./script/people.js"></script>
+    <script type="module" defer src="./script/people.js"></script>
 </head>
 
 <body>
@@ -38,59 +38,20 @@
             </article>
         </div>
         <!--Card for tripulants-->
-        <div class="card-container tripulants">
-            <article class="card-tripulants">
-                <button class="corner fav">
-                    <i class="i fas fa-plus-circle"></i>
-                </button>
-                <img src="./img/people.png" alt="tripulant" class="card-img">
-                <div class="card-info">
-                    <h3 class="card-title">Lela Organa</h3>
-                    <p class="card-desc">
-                        Genero: XXXX<br>
-                        Nacimiento: XXXX<br>
-                    </p>
-                </div>
-            </article>
-            <article class="card-tripulants">
-                <button class="corner fav">
-                    <i class="i fas fa-plus-circle"></i>
-                </button>
-                <img src="./img/people.png" alt="tripulant" class="card-img">
-                <div class="card-info">
-                    <h3 class="card-title">Lela Organa</h3>
-                    <p class="card-desc">
-                        Genero: XXXX<br>
-                        Nacimiento: XXXX<br>
-                    </p>
-                </div>
-            </article>
-            <article class="card-tripulants">
-                <button class="corner fav">
-                    <i class="i fas fa-plus-circle"></i>
-                </button>
-                <img src="./img/people.png" alt="tripulant" class="card-img">
-                <div class="card-info">
-                    <h3 class="card-title">Lela Organa</h3>
-                    <p class="card-desc">
-                        Genero: XXXX<br>
-                        Nacimiento: XXXX<br>
-                    </p>
-                </div>
-            </article>
-            <article class="card-tripulants">
-                <button class="corner fav">
-                    <i class="i fas fa-plus-circle"></i>
-                </button>
-                <img src="./img/people.png" alt="tripulant" class="card-img">
-                <div class="card-info">
-                    <h3 class="card-title">Lela Organa</h3>
-                    <p class="card-desc">
-                        Genero: XXXX<br>
-                        Nacimiento: XXXX<br>
-                    </p>
-                </div>
-            </article>
+        <div class="card-container tripulants" id="tripulants-container fd-row">
+            <div class="row jc-sa">
+                <button class="button" id="navBackTr"><</button>
+                <button class="button" id="navFrontTr">></button>
+            </div>
+            <div class="tripulants-container fd-row" id="tr-pag-1"></div>
+            <div class="tripulants-container fd-row hidden" id="tr-pag-2"></div>
+            <div class="tripulants-container fd-row hidden" id="tr-pag-3"></div>
+            <div class="tripulants-container fd-row hidden" id="tr-pag-4"></div>
+            <div class="tripulants-container fd-row hidden" id="tr-pag-5"></div>
+            <div class="tripulants-container fd-row hidden" id="tr-pag-6"></div>
+            <div class="tripulants-container fd-row hidden" id="tr-pag-7"></div>
+            <div class="tripulants-container fd-row hidden" id="tr-pag-8"></div>
+            <div class="tripulants-container fd-row hidden" id="tr-pag-9"></div>
         </div>
     </section>
     <!--End of section-->

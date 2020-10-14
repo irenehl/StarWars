@@ -8,6 +8,23 @@ export default function Card(classes, starship) {
 
     button.onclick = (e) => {
         localStorage.setItem('temp', JSON.stringify(starship))
+        
+        var ships = JSON.parse(localStorage.getItem('ships'))
+
+        console.log(ships);
+
+        if(!ships) {
+            ships = {ships: [starship]}
+        }
+        else {
+            var add = ships.ships.find(s => s.name === starship.name)
+            console.log(add);
+
+            if(add == null)
+                ships.ships.push(starship)
+        }
+        localStorage.setItem('ships', JSON.stringify(ships))
+
         window.location.replace('/people.html')
     }
 

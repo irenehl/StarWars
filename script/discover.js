@@ -1,4 +1,4 @@
-import Card from './Export/card.js'
+import Card from './Export/starship.js'
 import utilities from './Export/utilities.js'
 
 var currentPage = 1,
@@ -25,7 +25,7 @@ var btnPrev = document.getElementById("navBackDiscover")
 var fillContainerWithCards = (increment) => {
     pagination.classList.toggle("hidden")
     pagination.innerHTML = ''
-    currentPage = utilities.pageLimits(currentPage, increment)
+    currentPage = utilities.pageLimits(currentPage, increment, 4)
     pagination = document.getElementById(`disc-pag-${currentPage}`)
 
     fetch(utilities.BASE_URL + `starships/?page=${currentPage}`)

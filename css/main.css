@@ -1,7 +1,7 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 0.8rem;
   font-family: 'Montserrat', sans-serif; }
 
 * {
@@ -68,7 +68,8 @@ div.hidden {
   padding: 5px 0;
   border-bottom: 1.5px solid black;
   font-weight: 700;
-  font-size: 1.2rem; }
+  font-size: 1rem;
+  text-align: center; }
 
 .card-tripulants {
   margin: 2rem 3rem;
@@ -167,7 +168,6 @@ div.hidden {
 .container {
   width: 100%;
   height: 80vh;
-  overflow-y: scroll;
   box-sizing: border-box;
   justify-content: space-around;
   display: flex;
@@ -190,6 +190,11 @@ section.container {
   display: inherit;
   flex-direction: row;
   width: 100%; }
+
+.fd-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
 
 .pd-side {
   box-sizing: border-box;
@@ -229,8 +234,7 @@ section.container {
 
 .tripulants {
   flex-direction: row;
-  height: 50vh;
-  overflow-y: scroll; }
+  height: 50vh; }
   .tripulants .card-tripulants {
     margin: 0 1rem;
     margin-bottom: 2rem;
@@ -238,7 +242,7 @@ section.container {
 
 .col-half {
   width: 50%;
-  height: 70%;
+  height: 60%;
   box-sizing: border-box;
   padding: 1rem 0;
   display: flex;
